@@ -7,9 +7,9 @@ class HelloWorld < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/osx-cross/homebrew-tests/releases/download/hello-world-9.0.0"
+    root_url "https://github.com/osx-cross/homebrew-tests/releases/download/hello-world-9.0.0_1"
     cellar :any_skip_relocation
-    sha256 "03e521413c1b289da689806d9a32ffd9f5267102ceaace68c039c0e884152c65" => :catalina
+    sha256 "38092981afc9c801e8667460aadc603ea6047f3b683d12675efff7e409bbecd0" => :catalina
   end
 
   def install
