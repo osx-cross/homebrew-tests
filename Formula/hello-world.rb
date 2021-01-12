@@ -4,7 +4,7 @@ class HelloWorld < Formula
 
   url "https://github.com/ladislas/hello-world/archive/9.0.0.tar.gz"
   sha256 "5b4bb2c4d96e2d9adb38b4f92ab20a1806a6411f902c712ea9cf5c1a5a7ab65b"
-  revision 1
+  revision 2
 
   bottle do
     root_url "https://github.com/osx-cross/homebrew-tests/releases/download/hello-world-9.0.0_1"
