@@ -19,10 +19,6 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
 
       - name: Set up git
-        # uses: Homebrew/actions/git-user-config@master
-        # with:
-        #   username: osxCrossTestBot
-        #   token: ${{ secrets.OSX_CROSS_TESTS_HOMEBREW_GITHUB_API_TOKEN }}
         run: |
           brew install hub
           git config --global user.name "osxCrossTestBot"
