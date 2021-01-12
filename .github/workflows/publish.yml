@@ -15,6 +15,11 @@ jobs:
     if: contains(github.event.pull_request.labels.*.name, 'pr-pull')
     runs-on: macos-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          token: "${{ secrets.OSX_CROSS_TESTS_HOMEBREW_GITHUB_API_TOKEN }}"
+
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
@@ -22,7 +27,6 @@ jobs:
         run: |
           git config --global user.name "osxCrossTestBot"
           git config --global user.email "osxCrossTestBot@leka.io"
-          git config credential.helper '!f() { sleep 1; echo "username=osxCrossTestBot"; echo "password=${{ secrets.OSX_CROSS_TESTS_HOMEBREW_GITHUB_API_TOKEN }}"; }; f'
 
       - name: Pull bottles
         run: brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST
